@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://cri74kuv36d0h"]
+
+[ext_resource type="Script" uid="uid://1moft8txt5x7" path="res://script.gd" id="1_cn5gw"]
+
+[node name="form" type="Node2D"]
+script = ExtResource("1_cn5gw")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Label" type="Label" parent="."]
+offset_right = 195.0
+offset_bottom = 43.0
+text = "Digite algo aqui"
+
+[node name="Button" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 68.0
+offset_right = 574.0
+offset_bottom = 170.0
+text = "apoerte"
+
+[connection signal="pressed" from="Label/Button" to="." method="_on_button_pressed"]
