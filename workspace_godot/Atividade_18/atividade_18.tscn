@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqpdnbv1jgtm"]
+
+[ext_resource type="Script" uid="uid://br7g7x5oh1hum" path="res://Atividade_18/atividade_18.gd" id="1_58hhj"]
+[ext_resource type="Texture2D" uid="uid://dh4o1qybjgai0" path="res://Atividade_18/circle-regular-full (1).svg" id="2_e2snv"]
+[ext_resource type="Texture2D" uid="uid://0m3p4q5php44" path="res://Atividade_18/circle-regular-full.svg" id="3_le720"]
+
+[node name="Atividade18" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_58hhj")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 547.0
+offset_bottom = 340.0
+scale = Vector2(0.5, 0.5)
+texture_under = ExtResource("2_e2snv")
+texture_progress = ExtResource("3_le720")
+
+[node name="Label" type="Label" parent="TextureProgressBar"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Timer" type="Timer" parent="."]
