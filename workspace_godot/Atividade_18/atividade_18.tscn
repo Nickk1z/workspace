@@ -18,17 +18,31 @@ layout_mode = 0
 offset_right = 547.0
 offset_bottom = 340.0
 scale = Vector2(0.5, 0.5)
+fill_mode = 4
 texture_under = ExtResource("2_e2snv")
 texture_progress = ExtResource("3_le720")
 
 [node name="Label" type="Label" parent="TextureProgressBar"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 284.0
+offset_top = 238.0
+offset_right = 346.0
+offset_bottom = 375.0
+theme_override_font_sizes/font_size = 100
+text = "1"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 374.0
+offset_top = 115.0
+offset_right = 446.0
+offset_bottom = 176.0
+text = "+50"
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="value_changed" from="TextureProgressBar" to="." method="_on_texture_progress_bar_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
