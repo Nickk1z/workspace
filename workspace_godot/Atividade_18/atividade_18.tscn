@@ -1,8 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqpdnbv1jgtm"]
+[gd_scene load_steps=7 format=3 uid="uid://dqpdnbv1jgtm"]
 
 [ext_resource type="Script" uid="uid://br7g7x5oh1hum" path="res://Atividade_18/atividade_18.gd" id="1_58hhj"]
 [ext_resource type="Texture2D" uid="uid://dh4o1qybjgai0" path="res://Atividade_18/circle-regular-full (1).svg" id="2_e2snv"]
 [ext_resource type="Texture2D" uid="uid://0m3p4q5php44" path="res://Atividade_18/circle-regular-full.svg" id="3_le720"]
+
+[sub_resource type="Curve" id="Curve_58hhj"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0.00617285, 164.045), 0.0, 0.0, 0, 0, Vector2(0.975309, 24.7191), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_e2snv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.235955), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_58hhj"]
+offsets = PackedFloat32Array(0.132353, 0.838235)
+colors = PackedColorArray(0.667351, 0.0907223, 0.149684, 1, 0.809482, 0.957388, 0.368871, 1)
 
 [node name="Atividade18" type="Control"]
 layout_mode = 3
@@ -15,8 +28,10 @@ script = ExtResource("1_58hhj")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 layout_mode = 0
-offset_right = 547.0
-offset_bottom = 340.0
+offset_left = 394.0
+offset_top = 164.0
+offset_right = 1034.0
+offset_bottom = 804.0
 scale = Vector2(0.5, 0.5)
 fill_mode = 4
 texture_under = ExtResource("2_e2snv")
@@ -33,15 +48,33 @@ text = "1"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 374.0
-offset_top = 115.0
-offset_right = 446.0
-offset_bottom = 176.0
+offset_left = 799.0
+offset_top = 289.0
+offset_right = 871.0
+offset_bottom = 350.0
 text = "+50"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
 autostart = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(549, 322)
+emitting = false
+amount = 200
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 100.0
+radial_accel_max = 25.0
+radial_accel_curve = SubResource("Curve_58hhj")
+scale_amount_min = 8.0
+scale_amount_max = 16.0
+scale_amount_curve = SubResource("Curve_e2snv")
+color_initial_ramp = SubResource("Gradient_58hhj")
 
 [connection signal="value_changed" from="TextureProgressBar" to="." method="_on_texture_progress_bar_value_changed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
