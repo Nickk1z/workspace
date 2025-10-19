@@ -204,7 +204,8 @@ grow_vertical = 2
 script = ExtResource("1_1wua2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(249, 121)
+position = Vector2(260, 134)
+scale = Vector2(1.34375, 1.40625)
 sprite_frames = SubResource("SpriteFrames_k4r7w")
 animation = &"down"
 speed_scale = 3.0
