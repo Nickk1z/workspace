@@ -11,8 +11,8 @@ func _physics_process(delta: float) -> void:
 	
 	direction = Vector2.ZERO
 
-	direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	direction.x = Input.get_action_strength("direita") - Input.get_action_strength("esquerda")
+	direction.y = Input.get_action_strength("baixo") - Input.get_action_strength("cima")
 
 	if direction.length() > 0:
 		direction = direction.normalized()

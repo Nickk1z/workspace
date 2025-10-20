@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://cjhvsusg8qn0l"]
 
-[ext_resource type="Script" uid="uid://dpfkjriv43a0y" path="res://Atividade_23/atividade_23.gd" id="1_883hv"]
+[ext_resource type="Script" uid="uid://dpfkjriv43a0y" path="res://Atividade_23/atividade_23_2.gd" id="1_883hv"]
 [ext_resource type="Texture2D" uid="uid://dj0orbnng2hgo" path="res://Atividade_23/With_shadow/Bull_animation_with_shadow.png" id="2_apedm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d1f0d"]
