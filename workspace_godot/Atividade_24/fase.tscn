@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bihnkj5y1fh3e"]
+
+[ext_resource type="PackedScene" uid="uid://bfljr727s6yxf" path="res://Atividade_24/personagem.tscn" id="1_a2mpb"]
+[ext_resource type="PackedScene" uid="uid://dotrblgfr67t0" path="res://Atividade_24/obstaculo.tscn" id="2_r8ha4"]
+[ext_resource type="PackedScene" uid="uid://bnng2jtuitn1g" path="res://Atividade_24/obstaculo2.tscn" id="3_q3gho"]
+[ext_resource type="PackedScene" uid="uid://bhhtax3ir5fhe" path="res://Atividade_23/atividade_23.tscn" id="4_srnm1"]
+
+[node name="Teste" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_a2mpb")]
+position = Vector2(237, 158)
+
+[node name="Node2D2" parent="." instance=ExtResource("2_r8ha4")]
+
+[node name="Node2D3" parent="." instance=ExtResource("3_q3gho")]
+
+[node name="Atividade_23" parent="." instance=ExtResource("4_srnm1")]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dotrblgfr67t0"]
+
+[ext_resource type="Texture2D" uid="uid://icx502yp37aq" path="res://Atividade_24/Pedras/Rocks_source.png" id="1_p00vp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqgxt"]
+atlas = ExtResource("1_p00vp")
+region = Rect2(64, 0, 64, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_srowh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqgxt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p00vp"]
+radius = 26.834
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(465, 168)
+sprite_frames = SubResource("SpriteFrames_srowh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(468, 168.25)
+shape = SubResource("CircleShape2D_p00vp")
