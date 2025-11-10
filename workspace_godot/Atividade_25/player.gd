@@ -5,30 +5,30 @@ signal hurt
 var velocity = Vector2.ZERO
 var screensize = Vector2(480, 720)
 
-func _process(delta):
+func _process(delta: float) -> void:
 	velocity = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	position += velocity + speed + delta
+	position += velocity * speed * delta
 	position.x = clamp(position.x, 0, screensize.x)
 	position.y = clamp(position.y, 0, screensize.y)
 	
-	if velocity.length()>0:
+	if velocity.length() > 0:
 		$AnimatedSprite2D.animation = "run"
 	else:
 		$AnimatedSprite2D.animation = "idle"
 		
 	if velocity.x != 0:
-		$AnimatedSprite2D.flip_h = velocity.x < 0
+		$AnimatedSprite2D.flip_h = velocity.x > 0
 		
-func start():
+func start() -> void:
 	set_process(true)
 	position = screensize / 2
 	$AnimatedSprite2D.animation = "idle"
 	
-func die():
+func die() -> void:
 	$AnimatedSprite2D.animation = "hurt"
 	set_process(false)
 
-func _on_area_entered(area):
+func _on_area_entered(area) -> void:
 	if area.is_in_group("coins"):
 		area.pickup()
 		pickup.emit()

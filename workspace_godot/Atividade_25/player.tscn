@@ -81,7 +81,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 8.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -108,22 +108,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5y5tb"]
-size = Vector2(60, 49)
+size = Vector2(69, 52)
 
 [node name="Player" type="Area2D"]
 script = ExtResource("1_iuj1n")
+speed = 349
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(278, 125)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_d8eq5")
-animation = &"hurt"
+animation = &"idle"
 autoplay = "idle"
-frame = 1
-frame_progress = 0.969542
-speed_scale = 4.0
+frame_progress = 0.531365
+speed_scale = 3.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(289, 148.5)
+position = Vector2(284.5, 147)
 shape = SubResource("RectangleShape2D_5y5tb")
