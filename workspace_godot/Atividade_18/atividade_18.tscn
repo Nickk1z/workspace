@@ -28,10 +28,10 @@ script = ExtResource("1_58hhj")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 layout_mode = 0
-offset_left = 394.0
-offset_top = 164.0
-offset_right = 1034.0
-offset_bottom = 804.0
+offset_left = 71.0
+offset_top = 90.0
+offset_right = 711.0
+offset_bottom = 730.0
 scale = Vector2(0.5, 0.5)
 fill_mode = 4
 texture_under = ExtResource("2_e2snv")
@@ -48,10 +48,10 @@ text = "1"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 799.0
-offset_top = 289.0
-offset_right = 871.0
-offset_bottom = 350.0
+offset_left = 345.0
+offset_top = 72.0
+offset_right = 417.0
+offset_bottom = 133.0
 text = "+50"
 
 [node name="Timer" type="Timer" parent="."]
@@ -59,7 +59,7 @@ wait_time = 0.3
 autostart = true
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(549, 322)
+position = Vector2(230, 252)
 emitting = false
 amount = 200
 lifetime = 2.0

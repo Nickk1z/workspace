@@ -10,7 +10,7 @@ var playing = false
 func _ready():
 	screensize = get_viewport().get_visible_rect().size
 	$Player.screensize = screensize
-	$Player.hide()
+	#$Player.hide()
 	
 func new_game():
 	playing = true

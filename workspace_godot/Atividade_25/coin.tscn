@@ -107,7 +107,8 @@ script = ExtResource("1_etlct")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["coins"]]
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_vhi0s")
-frame_progress = 0.414411
+autoplay = "default"
+frame_progress = 0.377446
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["coins"]]
 shape = SubResource("CircleShape2D_kw7hy")

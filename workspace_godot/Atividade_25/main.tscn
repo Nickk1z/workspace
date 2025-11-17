@@ -20,5 +20,7 @@ stretch_mode = 1
 [node name="GameTimer" type="Timer" parent="."]
 
 [node name="coin" parent="." instance=ExtResource("2_xued4")]
+position = Vector2(132, 156)
 
 [node name="Player" parent="." instance=ExtResource("3_i46ti")]
+position = Vector2(231, 259)
